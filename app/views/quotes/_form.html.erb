@@ -1,10 +1,10 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
+<%= form_with(model: quote, local: true) do |form| %>
+  <% if quote.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
 
       <ul>
-      <% post.errors.full_messages.each do |message| %>
+      <% quote.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

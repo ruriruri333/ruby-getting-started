@@ -1,6 +1,6 @@
-class CreatePosts < ActiveRecord::Migration[5.2]
+class CreateQuotes < ActiveRecord::Migration[5.2]
   def change
-    create_table :posts do |t|
+    create_table :quotes do |t|
       t.string :quote
       t.string :image_url
 

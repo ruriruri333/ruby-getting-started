@@ -12,7 +12,7 @@ class LinebotController < ApplicationController
      end
      
      def callback
-         @post=Quote.offset( rand(Post.count) ).first
+         @post=Quote.offset( rand(Quote.count) ).first
        body = request.body.read
    
        signature = request.env["HTTP_X_LINE_SIGNATURE"]

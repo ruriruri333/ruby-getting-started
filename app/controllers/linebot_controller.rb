@@ -27,10 +27,16 @@ class LinebotController < ApplicationController
          when Line::Bot::Event::Message
            case event.type
            when Line::Bot::Event::MessageType::Text
-             message = {
-               type: "text",
-               text: @post.quote
-             }
+             message = [
+              { 
+                  type: "text",
+                  text: @post.quote
+              },
+              {
+                  type: "text",
+                  text: @post.image_url
+              }
+             ]
              client.reply_message(event["replyToken"], message)
            when Line::Bot::Event::MessageType::Location
              message = {

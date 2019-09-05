@@ -33,8 +33,9 @@ class LinebotController < ApplicationController
                   text: @post.quote
               },
               {
-                  type: "text",
-                  text: @post.image_url
+                 type:"image",
+                 originalContentUrl:@post.image_url,
+                 previewImageUrl:@post.image_url
               }
              ]
              client.reply_message(event["replyToken"], message)

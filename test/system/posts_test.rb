@@ -14,6 +14,7 @@ class PostsTest < ApplicationSystemTestCase
     visit posts_url
     click_on "New Post"
 
+    fill_in "Image Url", with: @post.image_url
     fill_in "Quote", with: @post.quote
     click_on "Create Post"
 
@@ -25,6 +26,7 @@ class PostsTest < ApplicationSystemTestCase
     visit posts_url
     click_on "Edit", match: :first
 
+    fill_in "Image Url", with: @post.image_url
     fill_in "Quote", with: @post.quote
     click_on "Update Post"
 

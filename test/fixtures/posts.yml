@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  quote: 
+  quote: MyString
+  image_url: MyString
 
 two:
-  quote: 
+  quote: MyString
+  image_url: MyString

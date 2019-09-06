@@ -49,7 +49,7 @@ class LinebotController < ApplicationController
                 message = 
               { 
                   type: "text",
-                  text: "少しでもいいから一歩ずつ前に進んでみたら？"
+                  text: @Makeup.st
               }
           else 
               { 

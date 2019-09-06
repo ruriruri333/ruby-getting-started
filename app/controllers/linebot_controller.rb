@@ -41,7 +41,7 @@ class LinebotController < ApplicationController
              ]
              client.reply_message(event["replyToken"], message)
                end
-               else if event.message['text']=="調子乗りまくり卍！！！！"
+               elsif event.message['text']=="調子乗りまくり卍！！！！"
                 message = 
               { 
                   type: "text",
@@ -49,7 +49,7 @@ class LinebotController < ApplicationController
               }   
               client.reply_message(event["replyToken"], message)
           end
-           else if event.message['text']=="もうやだ、なんもしたくない…"
+           elsif event.message['text']=="もうやだ、なんもしたくない…"
                 message = 
               { 
                   type: "text",
@@ -57,7 +57,7 @@ class LinebotController < ApplicationController
               }
               client.reply_message(event["replyToken"], message)
           end
-          else
+          else 
               { 
                   type: "text",
                   text: "今日も一日お疲れ様(*´з`)"

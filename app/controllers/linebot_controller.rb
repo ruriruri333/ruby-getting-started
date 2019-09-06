@@ -40,7 +40,24 @@ class LinebotController < ApplicationController
               }
              ]
              client.reply_message(event["replyToken"], message)
-           end
+               end
+               else if event.message['text']=="調子乗りまくり卍！！！！"
+                message = 
+              { 
+                  type: "text",
+                  text: "自分を見つめ直して、勤勉になりなさい。"
+              }   
+           else if event.message['text']=="もうやだ、なんもしたくない…"
+                message = 
+              { 
+                  type: "text",
+                  text: "少しでもいいから一歩ずつ前に進んでみたら？"
+              }   
+          else
+              { 
+                  type: "text",
+                  text: "今日も一日お疲れ様(*´з`)"
+              }   
            when Line::Bot::Event::MessageType::Location
              message = {
                type: "location",

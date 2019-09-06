@@ -49,7 +49,7 @@ class LinebotController < ApplicationController
                 message = 
               { 
                   type: "text",
-                  text: @post.makeups
+                  text: Makeup.all[0]["st"]
               }
           else 
               { 

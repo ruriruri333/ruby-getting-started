@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :makeups
   resources :quotes
   resources :widgets
 

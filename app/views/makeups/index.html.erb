@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Makeups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>St</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @makeups.each do |makeup| %>
+      <tr>
+        <td><%= makeup.st %></td>
+        <td><%= link_to 'Show', makeup %></td>
+        <td><%= link_to 'Edit', edit_makeup_path(makeup) %></td>
+        <td><%= link_to 'Destroy', makeup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Makeup', new_makeup_path %>

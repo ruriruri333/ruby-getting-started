@@ -49,7 +49,7 @@ class LinebotController < ApplicationController
                 message = 
               { 
                   type: "text",
-                  text: Makeup.all[0]["st"]
+                  text: Makeup.all.to_a.sample["st"]
               }
           else 
               { 
